@@ -1,0 +1,32 @@
+.public-outer {
+}
+.myfriend-top {
+	background: url(../image/myfriend_top.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 6.5rem;
+}
+.myfriend-search {
+	width: 14rem;
+	margin: auto;
+}
+.myfriend-search input {
+	background: #fff;
+}
+
+.myfriend-friendCount {
+	color: #fff;
+	width: 5rem;
+	margin-left: 1rem;
+	text-align: center;
+}
+.myfriend-friendCount p:nth-child(1) {
+	color: #fff;
+	font-size: .55rem;
+}
+.myfriend-friendCount p:nth-child(2) {
+	color: #fff;
+	font-size: 2rem;
+	margin-top: 1rem;
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/public.css" rel="stylesheet" />
+		<link href="../css/activationcode.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="public-outer">
+			<div class="public-tab">
+				<span v-for="item in tabList" :class="{selected:active == item}" @tap="tabchange_fk(item)">{{item}}</span>
+			</div>
+			<div id="usedCode" v-show="active == tabList[0]">
+				<div class="activationcode-usedDetails" v-for="item in usedCodeList">
+					<span class="activationcode-usedType">已使用</span>
+					<p class="activationcode-usedCode">{{item.code}}</p>
+					<div class="activationcode-usedMessage">
+						<p>
+							<span>使用人账号:</span>
+							<label >{{item.user}}</label>
+						</p>
+						<p>
+							<span>赠送数量:</span>
+							<label >{{item.usedCount}}</label>
+						</p>
+					</div>
+					<p class="activationcode-usedDate">{{item.date}}</p>
+				</div>
+			</div>
+			<div id="waitUsed" v-show="active == tabList[1]">
+				<div class="activationcode-waitUsed" v-for="item in waitUsedList">
+					<p>{{item}}</p>
+					<button>使用</button>
+				</div>
+			</div>
+			<div id="giveCode" v-show="active == tabList[2]">
+				<div class="public-messageInput">
+					<img src="" alt="" />
+					<input type="text"  placeholder="请输入要赠送的手机号" />
+				</div>
+				<div class="public-messageInput">
+					<img src="" alt="" />
+					<input type="text"  placeholder="请输入要赠送的数量" />
+				</div>
+				<div class="public-messageInput">
+					<img src="" alt="" />
+					<input type="text"  placeholder="请输入激活码ID" />
+				</div>
+				<button class="public-subBtn">确认赠送</button>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-2.1.0.js"></script>
+	<script src="../js/vue.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/public.js"></script>
+	<script type="text/javascript">  
+		mui.init();
+		$(function (){
+			public_header(1,'激活码管理','',1);
+			public_fotter();
+			new Vue({
+				el:'.public-outer',
+				data:{
+					tabList : ['已使用','未使用','赠送激活码'],
+					active:'已使用' ,
+					usedCodeList : [
+						{'code':'202020200202123sdfsdf','user':'13111111111','usedCount':'100','date':'2018/11/09  13:55:41'},
+						{'code':'202020200202123sdfsdf','user':'13111111111','usedCount':'100','date':'2018/11/09  13:55:41'},
+						{'code':'202020200202123sdfsdf','user':'13111111111','usedCount':'100','date':'2018/11/09  13:55:41'},
+						{'code':'202020200202123sdfsdf','user':'13111111111','usedCount':'100','date':'2018/11/09  13:55:41'},
+						{'code':'202020200202123sdfsdf','user':'13111111111','usedCount':'100','date':'2018/11/09  13:55:41'}
+					],
+					waitUsedList : ['202020200202123sdfsdf','202020200202123sdfsdf','202020200202123sdfsdf']
+				},
+				methods : {
+					tabchange_fk : function (item){
+						this.active = item;
+					}
+				}
+				
+			});
+		})
+	</script>
+
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/public.css" rel="stylesheet" />
+		<link href="../css/usercenter.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="public-outer">
+			<div class="usercenter-top">
+				<img src="../image/loginOut.png" alt="" class="usercenter-loginOut" @tap="loginOut()"/>
+				<div>
+					<p>资金池</p>
+					<p>{{zijinchi}}</p>
+				</div>
+			</div>
+			<div class="usercenter-fk">
+				<ul class="mui-table-view">
+				        <li class="mui-table-view-cell" v-for="item in controlList">
+				            <a class="mui-navigate-right"  @tap="location_fk(item)">
+				                	<img v-bind:src="item.imgURL" alt="" />{{item.name}}
+				            </a>
+				        </li>
+				        
+				    </ul>
+			</div>
+			
+		</div>
+		 
+		
+	</body>
+	<script src="../js/jquery-2.1.0.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/vue.js"></script>
+	<script type="text/javascript">  
+		mui.init();
+		$(function (){
+			public_header(1,'个人中心','',1);
+			public_fotter();
+			
+			new Vue({
+				el:'.public-outer',
+				data : {
+					zijinchi:20000011,
+					controlList : [
+						{'name':'广告分润提现','linkURL':'putforward.html','imgURL':''},
+						{'name':'分润记录','linkURL':'putforwardrecord.html','imgURL':''},
+						{'name':'我的好友','linkURL':'','imgURL':''},
+						{'name':'注册码新会员','linkURL':'newuser.html','imgURL':''},
+						{'name':'激活码管理','linkURL':'activationcode.html','imgURL':''},
+						{'name':'瓜瓜宝协议','linkURL':'','imgURL':''},
+						{'name':'使用协议','linkURL':'','imgURL':''},
+						{'name':'瓜瓜宝分宝','linkURL':'','imgURL':''}
+					]
+				},
+				methods : {
+					loginOut : function (){
+						mui.confirm('是否退出？')
+					},
+					location_fk:function(item){
+						location.href = item.linkURL; 
+					}
+				}
+			});
+		});
+		
+	</script>
+
+</html>

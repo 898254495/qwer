@@ -1,0 +1,9 @@
+body,.public-outer {
+	background: #fff;
+}
+.public-outer {
+	padding-top: 4rem;
+} 
+.public-subBtn {
+	margin-top: 3rem;
+}

@@ -1,0 +1,74 @@
+body,.public-outer {
+	background: #fff;
+}
+.activationcode-usedDetails {
+	width: 14rem;
+	border: solid 1px #dedede;
+	position: relative;
+	margin:.5rem auto;
+	padding:  .5rem;
+}
+.activationcode-usedDetails .activationcode-usedType {
+	color: orangered;
+	width: 4.5rem;
+	height: 1.5rem;
+	border: solid 1px ;
+	text-align: center;
+	line-height: 1.5rem;
+	display: inline-block;
+	transform:rotateZ(-31deg);
+    -ms-transform:rotateZ(-31deg); /* IE 9 */
+    -webkit-transform:rotateZ(-31deg); /* Safari and Chrome */
+	position: absolute;
+	top: .5rem;
+	left: -0.5rem;
+}
+.activationcode-usedDetails .activationcode-usedCode{
+	text-align: center;
+	color: #333;
+}
+.activationcode-usedMessage {
+	display: flex;
+	flex-direction: row;
+	color: #666;
+	margin-bottom: .5rem;
+}
+.activationcode-usedMessage p {
+	margin: 0;
+}
+.activationcode-usedMessage p:nth-child(1) {
+	/*width: 50%;*/
+	margin-right: 2rem;
+}
+.activationcode-usedMessage p span {}
+.activationcode-usedMessage p label {}
+.activationcode-usedDate {
+	text-align: right;
+	margin: 0;
+}
+
+
+.activationcode-waitUsed {
+	display: flex;
+	flex-direction: row;
+	width: 14rem;
+	height: 2rem;
+	border: solid 1px #dedede;
+	position: relative;
+	margin:.5rem auto;
+	line-height: 2rem;
+}
+.activationcode-waitUsed p {
+	text-align: center;
+	width: 9rem;
+	margin: 0 auto;
+	font-size: .55rem;
+}
+.activationcode-waitUsed button {
+	margin-left: auto;
+	width: 4rem;
+	background: #007AFF;
+	color: #fff;
+	border: none;
+	
+}

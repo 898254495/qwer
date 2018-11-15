@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/public.css" rel="stylesheet" />
+		<link href="../css/myfriend.css" rel="stylesheet" />
+	</head> 
+
+	<body>
+		<div class="public-outer">
+			<!--顶部总计-->
+			<div class="myfriend-top">
+				<div class="mui-input-row mui-search myfriend-search">
+					   <input type="search" class="" placeholder="">
+				</div>
+				<div class="myfriend-friendCount">
+					<p>我的好友总数（人）</p>
+					<p>21</p>
+				</div>
+			</div>
+			<!---->
+			<div class="myfriend-list">
+				<div class="myfriend-firendMessage">
+					<span class="myfriend-activationType"></span>
+					<div>
+						<img src="" alt="" class="myfriend-userPhoto" />
+						<div class="myfriend-friendDetails">
+							<div>
+								<p> <span>好友ID</span><label >2566666</label> </p>
+								<p>好友<span>3</span> 人</p>
+							</div>
+							<div>
+								<span>注册时间</span>
+								<label >2018-05-06  15:19:19</label>
+							</div>
+						</div>
+						<button class="">已激活</button>
+						<button class="" style="display:none;">激活好友</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-2.1.0.js"></script>
+	<script src="../js/vue.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/public.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		$(function (){
+			public_header(1,'我的好友','',1);
+			public_fotter();
+			new Vue({
+				el:'.public-outer',
+				data : {
+					friendList : [
+						{'friendID':'12312312','friendNum':'4','date':'2018-05-06  15:19:19','activationType':true},
+						{'friendID':'12312312','friendNum':'3','date':'2018-05-07  15:19:19','activationType':false},
+						{'friendID':'12312312','friendNum':'2','date':'2018-05-06  15:19:19','activationType':true},
+						{'friendID':'12312312','friendNum':'1','date':'2018-05-08  15:19:19','activationType':false},
+						{'friendID':'12312312','friendNum':'0','date':'2018-05-09  15:19:19','activationType':true},
+						{'friendID':'12312312','friendNum':'10','date':'2018-05-16  15:19:19','activationType':false}
+					];
+				}
+			});
+		})
+		
+	</script>
+</html>

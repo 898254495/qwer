@@ -1,0 +1,146 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+html,body {
+	height:100%;
+	width: 100%;
+	background: #f5f5f5;
+}
+.public-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 2rem;
+	color: #fff;
+	
+}
+.public-header .public-back {
+	width: 2.5rem;
+    height: 1.5rem;
+    padding: .3rem .8rem;
+    /* border: solid 1px #ccc; */
+    position: absolute;
+    left: 0rem;
+    top: .25rem;
+}
+.public-header .public-pageName {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: .7rem;
+	line-height: 2rem;
+	background:linear-gradient(to bottom,#ff5a0c,#ff3508);
+}
+
+.public-outer {
+	padding: 2rem 0;
+	background: #f5f5f5;
+}
+
+
+.public-fotter {
+	height: 2rem;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display:flex;
+	flex-direction: row;
+	background: #fff;
+	border-top: solid 2px #f5f5f5;
+}
+.public-fotter a {
+	flex:1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.public-fotter a img {
+	width: .9rem;
+    height: .9rem;
+    margin: auto;
+}
+.public-fotter a span {
+	text-align: center;
+	font-size: .5rem;
+	margin: auto;
+	color: #666;
+}
+
+.public-messageInput {
+	background: url(../image/inputBottom.png);
+	background-size: 85%;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	display: flex;
+	flex-direction: row;
+	width: 14rem;
+	margin: 1rem auto;
+}
+.public-messageInput img {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: .5rem;
+}
+.public-messageInput input {
+	border: none;
+	outline: none;
+	height: 1rem;
+	line-height: 1rem;
+	margin: auto 0;
+	width: 8rem;
+}
+.public-messageInput input::placeholder {
+	color: #ff9292;
+}
+
+.public-messageInput.public-messageImgCode div {
+	width: 3.5rem;
+	height: 1.2rem;
+	background: red;
+	margin-left: auto;
+}
+.public-messageInput.public-messageGetCode button {
+	width: 3.5rem;
+	height: 1.2rem;
+	background: red;
+	padding: 0;
+	margin-left: auto;
+}
+
+.public-subBtn {
+	display: block;
+	width:13rem;
+	margin: 0 auto;
+	padding: .5rem 0;
+	background: #ff0401;
+	color: #fff;
+	border-radius: 1rem;
+}
+
+.public-tab{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	height: 2rem;
+	position: fixed;
+	top: 2rem;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 10;
+	
+}
+.public-tab span {
+	flex: 1;
+	text-align: center;
+	line-height: 2rem;
+}
+.public-tab span.selected {
+	border-bottom: solid 1px orangered;
+	color: #ff9292;
+}
+
+.

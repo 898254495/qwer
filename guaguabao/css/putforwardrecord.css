@@ -1,0 +1,40 @@
+body,.public-outer {
+	background: #fff;
+}
+.putforwardrecord-block {
+	width: 100%;
+	border-bottom: solid 1px #dedede;
+	padding: 0.3rem 1rem;
+}
+.putforwardrecord-type {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: .5rem;
+}
+.putforwardrecord-type span {
+	width: 4rem;
+	color: #333;
+}
+.putforwardrecord-type span:nth-child(2) {
+	margin-left: auto;
+	text-align: right;
+	color: #2AC845;
+}
+.putforwardrecord-details {
+	display: flex;
+	flex-direction: row;
+}
+.putforwardrecord-details div {
+	color: #333;
+}
+.putforwardrecord-details div span {}
+.putforwardrecord-details div label {}
+.putforwardrecord-details p {
+	margin-left: auto;
+	color: orange;
+	font-size: .7rem;
+}
+.putforwardrecord-date {
+	text-align: center;
+	margin: 0;
+}

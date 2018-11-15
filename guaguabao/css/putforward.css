@@ -1,0 +1,41 @@
+body,.public-outer {
+	background: #fff;
+}
+.public-outer {
+	padding: 3rem 1rem 2rem 1rem;
+}
+.putforward-balance {
+	margin-bottom: 1.5rem;
+}
+.putforward-balance span {
+	color: #333;
+}
+.putforward-balance label {
+	color: #ff0401;
+}
+.putforward-messageInput {}
+.putforward-messageInput p {
+	color: #333;
+}
+.putforward-messageInput input {
+	border: none;
+	border-bottom: solid 1px #dedede;
+}
+
+.putforward-clause {
+	padding: 1rem;
+	font-size: .55rem;
+	color: #666;
+}
+.putforward-clause li {
+	margin-bottom: 1rem;
+}
+.putforward-subButton {
+	display: block;
+	width:13rem;
+	margin: 0 auto;
+	padding: .5rem 0;
+	background: #ff0401;
+	color: #fff;
+	border-radius: 1rem;
+}

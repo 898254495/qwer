@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>注册新用户</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/public.css" rel="stylesheet" />
+		<link href="../css/newuser.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="public-outer">
+			<div class="public-messageInput">
+				<img src="" alt="" />
+				<input type="text"  placeholder="请输入推荐人手机号" />
+			</div>
+			<div class="public-messageInput">
+				<img src="" alt="" />
+				<input type="text"  placeholder="请输入手机号" />
+			</div>
+			<div class="public-messageInput">
+				<img src="" alt="" />
+				<input type="text"  placeholder="请输入登录密码" />
+			</div>
+			<div class="public-messageInput">
+				<img src="" alt="" />
+				<input type="text"  placeholder="请确认登录密码" />
+			</div>
+			<div class="public-messageInput public-messageImgCode">
+				<img src="" alt="" />
+				<input type="text"  placeholder="请输入图片验证码" />
+				<div></div>
+			</div>
+			<div class="public-messageInput public-messageGetCode">
+				<img src="" alt="" />
+				<input type="text"  placeholder="请输入图片验证码" />
+				<button class="mui-btn mui-btn-red">获取验证码</button>
+			</div>
+			
+			<button class="public-subBtn">立即注册</button>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/jquery-2.1.0.js"></script>
+	<script src="../js/public.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		$(function (){
+			public_header(1,'注册新用户','',1);
+			public_fotter();
+		})
+	</script>
+</html>

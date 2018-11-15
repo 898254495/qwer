@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/public.css" rel="stylesheet" />
+		<link href="../css/putforward.css" rel="stylesheet" />
+	</head>
+ 
+	<body>
+		<div class="public-outer">
+			<div class="putforward-balance"> <span>当前可用提现金额:</span> <label >{{blance}}</label> </div>
+			<div class="putforward-messageInput">
+				<p>请输入支付宝账号</p>
+				<input type="text" placeholder="请输入正确的账号" v-model="account"/>
+			</div>
+			<div class="putforward-messageInput">
+				<p>请输入提现金额</p>
+				<input type="text" placeholder="提现数量为100的整数倍" v-model="amount"/>
+			</div>
+			<div class="putforward-messageInput">
+				<p>手续费</p>
+				<input type="text" placeholder="0" v-model="tip" readonly="readonly"/>
+			</div>
+			<ul class="putforward-clause">
+				<li>为保障资金安全，当您账户安全策略变更、密码修改、使用新地址提币，我们将对提币进行人工审核，请耐心等待工作人员电话或邮件联系</li>
+				<li>请务必确认手机、电脑及浏览器的安全，防止信息被篡改或泄露</li>
+			</ul>
+			<button type="button" class="putforward-subButton" @tap="postSub()">提交</button>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/jquery-2.1.0.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/vue.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		$(function (){
+			public_header(1,'提现','',1);
+			public_fotter();
+			
+			new Vue({
+				el:'.public-outer',
+				data:{
+					blance:2000,	//余额
+					account:'',	//账号
+					amount:'',	//提现金额
+					tip:''		//手续费
+				},
+				methods: {
+					postSub : function (){
+						mui.alert('执行提交操作');
+					}
+				},
+				watch : {
+					amount : function (){
+						this.tip = this.amount * 0.02;
+					}
+				}
+			});
+		})
+	</script>
+
+</html>
